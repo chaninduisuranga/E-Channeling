@@ -1,0 +1,68 @@
+
+
+body {
+    margin: 0;
+    font-family: "Poppins",serif;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+ 
+  .hero {
+    display: flex;
+   
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #fff;
+    
+    
+  }
+  
+  .hero .content {
+  transition: transform 0.5s ease-in-out;
+  
+    max-width: 50%;
+  }
+  
+  .hero h1 {
+    font-size: 100px;
+    color: #222060;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 20px;
+    color:olive;
+    font-family:cursive;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+  
+  .hero .buttons button {
+    background-color: #008000;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    margin-right: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .hero .buttons button:hover {
+    background-color: #ff8000;
+  }
+    .hero .illustration img {
+    max-width: 100%;
+    border-radius: 20px; /* Adjust for more/less curvature */
+    height: auto;
+    display: block; /* Prevents extra spacing under image */
+
+    /* Animation */
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+.hero .illustration img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* Adds depth */
+}

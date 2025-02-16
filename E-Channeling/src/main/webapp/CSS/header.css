@@ -1,0 +1,128 @@
+/* General Reset */
+body, h1, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #DFEBF6;
+    font-family: Arial, sans-serif;
+    color: #768A96;
+}
+
+/* Header Styling */
+.header {
+    background-color: #000000;
+    color: white;
+    padding: 25px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 75px;
+    margin-right: 10px;
+}
+
+.site-title {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+/* Navigation Bar */
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px; /* Adds space between buttons */
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: #000000;
+    font-size: 16px;
+    padding: 12px 20px;
+    border-radius: 13px; /* Curved box buttons */
+    border: 2px solid #004080; /* Red border */
+    background-color: white; /* White button */
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Button shadow */
+}
+
+.nav-links a:hover {
+    background-color: #0080ff;
+    color: white;
+    border-color: #ff8040; /* Darker red border on hover */
+}
+
+/* Primary Button Styling */
+.btn-primary {
+    padding: 12px 20px;
+    background-color: white;
+    color: #44576D;
+    border: 2px solid red; /* Red border */
+    border-radius: 30px; /* Rounded button */
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3); /* Button shadow */
+    margin-left: 20px; /* Space between buttons */
+}
+
+.btn-primary:hover {
+    background-color: #AAC7D8;
+    color: white;
+    border-color: darkred;
+    transform: translateY(-3px); /* Lift effect on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        background-color: #44576D;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 10px;
+        display: none;
+        border-radius: 0 0 20px 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Dropdown shadow */
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav {
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 20px;
+        color: white;
+        background: none;
+        border: none;
+    }
+}

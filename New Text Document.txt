@@ -1,0 +1,25 @@
+User Management
+Create: Allow users to register with personal details (name, email, phone, password).
+Read: Display user profiles with appointment history.
+Update: Allow users to edit profile details (e.g., change phone number or email).
+Delete: Users can delete their account if needed.
+2. Doctor Management
+Create: Admins can add doctors with details (name, specialization, hospital, availability).
+Read: Users can browse a list of doctors based on specialty or location.
+Update: Admins can update doctors’ schedules or details.
+Delete: Remove inactive doctors from the system.
+3. Appointment Booking
+Create: Patients can book appointments with a doctor for a specific date and time.
+Read: Patients can view their upcoming and past appointments.
+Update: Patients can reschedule or cancel appointments.
+Delete: Admins can delete expired or duplicate bookings.
+4. Payment & Billing
+Create: Generate invoices when an appointment is booked.
+Read: Users can view their payment history.
+Update: Allow updates in case of refunds or changes.
+Delete: Remove canceled transactions from records.
+5. Feedback & Ratings
+Create: Patients can leave reviews and ratings for doctors.
+Read: Display average ratings and feedback on doctor profiles.
+Update: Users can edit their feedback within a certain period.
+Delete: Admins can remove inappropriate feedback.
