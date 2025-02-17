@@ -8,15 +8,15 @@ body, h1, ul, li, a {
 }
 
 body {
-    background-color: #DFEBF6;
+    background-color: white; /* White background */
     font-family: Arial, sans-serif;
     color: #768A96;
 }
 
 /* Header Styling */
 .header {
-    background-color: #000000;
-    color: white;
+    background-color: #0000ff; /* Blue background */
+    color: #2692d9; /* Title color */
     padding: 25px 20px;
     display: flex;
     justify-content: space-between;
@@ -31,98 +31,130 @@ body {
 
 .logo {
     width: 75px;
-    margin-right: 10px;
+    margin-right: 8px;
 }
 
 .site-title {
-    font-size: 30px;
-    font-weight: bolder;
+	color:white;
+    font-size: 40px;
+    font-weight: 700;
+    animation: fadeIn 2s ease-in-out; /* Fade-in animation for site title */
 }
 
 /* Navigation Bar */
 .nav {
     display: flex;
+    justify-content: center; /* Center navigation */
     align-items: center;
-    justify-content: flex-end;
+    width: 100%; /* Full width */
+    background-color: transparent; /* Removed the black background */
+    padding: 5px 0;
 }
 
 .nav-links {
     display: flex;
-    gap: 25px; /* Adds space between buttons */
+    gap: 10px; /* Smaller gaps between buttons */
 }
 
 .nav-links li {
-    position: relative;
+    display: inline-block;
 }
 
 .nav-links a {
-    color: #000000;
+    color: white; /* White text color */
     font-size: 16px;
-    padding: 12px 20px;
-    border-radius: 13px; /* Curved box buttons */
-    border: 2px solid #004080; /* Red border */
-    background-color: white; /* White button */
-    font-weight: 500;
-    transition: 0.3s ease-in-out;
+    padding: 10px 18px;
+    border-radius: 10px; /* Curved box buttons */
+    border: 2px solid orange; /* Orange border */
+    background-color: blue; /* Blue button color */
+    font-weight: 600;
+    transition: 0.3s ease-in-out, transform 0.2s ease-in-out;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Button shadow */
 }
 
+/* Hover Effect */
 .nav-links a:hover {
-    background-color: #0080ff;
+    background-color: #0040ff; /* Darker blue on hover */
     color: white;
-    border-color: #ff8040; /* Darker red border on hover */
+    border-color: darkorange;
+    transform: scale(1.1); /* Button grows slightly */
+    animation: popUp 0.4s ease-in-out; /* Pop-up effect */
 }
 
-/* Primary Button Styling */
-.btn-primary {
-    padding: 12px 20px;
-    background-color: white;
-    color: #44576D;
-    border: 2px solid red; /* Red border */
-    border-radius: 30px; /* Rounded button */
-    font-weight: bold;
-    font-size: 14px;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3); /* Button shadow */
-    margin-left: 20px; /* Space between buttons */
+/* Pop-up Effect */
+@keyframes popUp {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2); /* Increase size */
+    }
+    100% {
+        transform: scale(1); /* Return to normal size */
+    }
 }
 
-.btn-primary:hover {
-    background-color: #AAC7D8;
-    color: white;
-    border-color: darkred;
-    transform: translateY(-3px); /* Lift effect on hover */
+/* Click Animation */
+.nav-links a:active {
+    animation: clickEffect 0.2s ease-in-out;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .nav-links {
-        flex-direction: column;
-        background-color: #44576D;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        padding: 10px;
-        display: none;
-        border-radius: 0 0 20px 20px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Dropdown shadow */
+@keyframes clickEffect {
+    0% {
+        transform: scale(1);
     }
-
-    .nav-links.active {
-        display: flex;
+    50% {
+        transform: scale(0.9);
     }
-
-    .nav {
-        position: relative;
+    100% {
+        transform: scale(1);
     }
+}
 
-    .menu-toggle {
-        display: block;
-        cursor: pointer;
-        font-size: 20px;
-        color: white;
-        background: none;
-        border: none;
+/* Animated Site Title */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav-links a {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Sign In Page Animation */
+.signin-page {
+    animation: slideInLeft 1s ease-in-out;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Sign Up Page Animation */
+.signup-page {
+    animation: slideInRight 1s ease-in-out;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }

@@ -32,8 +32,8 @@ body {
   
   .hero p {
     font-size: 20px;
-    color:olive;
-    font-family:cursive;
+    color:rgb(51, 123, 204)  ;
+      font-family:cursive;
     margin-bottom: 1.5rem;
     line-height: 1.6;
   }

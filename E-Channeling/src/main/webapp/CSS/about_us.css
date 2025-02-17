@@ -6,9 +6,11 @@ body {
     margin: 0;
     padding: 20px;
 }
-
+.main-content{
+	
+}
 /* About Section */
-.about-container {
+.about-section {
     background-color: #FFFFFF;
     padding: 30px;
     border-radius: 8px;
@@ -18,15 +20,15 @@ body {
     text-align: center;
 }
 
-.about-container h2 {
-    font-size: 32px;
-    font-weight: bold;
-    color: #44576D;
-    margin-bottom: 20px;
+.about-section h2 {
+    font-size: 52px;
+    font-weight: 800;
+    color: #004080;
+    margin-bottom: 30px;
 }
 
-.about-container p {
-    font-size: 16px;
+.about-section p {
+    font-size: 30px;
     line-height: 1.6;
     text-align: justify;
 }

@@ -18,7 +18,9 @@
       <h1>Welcome to eChannelling</h1>
       <p> E-Channeling makes health care simple with easy online doctor appointments. Browse top specialists, book instantly, and consult from anywhere. Secure, fast, and hassle-free—because your health matters.</p>
       <div class="buttons">
-        <button>Log In </button>
+        <a href="User_login.jsp">
+    <button type="button">Login</button>
+</a>
         <button>Sign Up</button>
       </div>
     </div>

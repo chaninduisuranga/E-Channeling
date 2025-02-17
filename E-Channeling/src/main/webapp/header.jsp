@@ -14,7 +14,7 @@
 <body>
   <header class="header">
     <div class="logo-container">
-        <a href="${pageContext.request.contextPath}/Index.jsp" title="E channeling">
+        <a href="${pageContext.request.contextPath}/Index.jsp" title="E Channeling">
             <img src="${pageContext.request.contextPath}/IMAGES/pic2.jpeg" alt="E Channeling  Logo" class="logo">
         </a>
         <h1 class="site-title">E Channeling</h1>
@@ -25,7 +25,7 @@
         <li><a href="${pageContext.request.contextPath}/Services.jsp" title="Services">Services</a></li>
         <li><a href="${pageContext.request.contextPath}/about_us.jsp" title="About">About Us</a></li>
         <li><a href="${pageContext.request.contextPath}/contact.jsp" title="Contact Us">Contact</a></li>
-        <li><a href="${pageContext.request.contextPath}/login.jsp" class="btn-primary" title="Login">Login</a></li>
+        
       </ul>
     </nav>
   </header>
