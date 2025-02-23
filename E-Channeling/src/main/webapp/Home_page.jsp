@@ -19,9 +19,11 @@
       <p> E-Channeling makes health care simple with easy online doctor appointments. Browse top specialists, book instantly, and consult from anywhere. Secure, fast, and hassle-free—because your health matters.</p>
       <div class="buttons">
         <a href="User_login.jsp">
-    <button type="button">Login</button>
+    <button type="button">LOGIN</button>
 </a>
-        <button>Sign Up</button>
+       <a href="signup.jsp">
+    <button type="button">SIGNUP</button>
+</a>
       </div>
     </div>
     <div class="illustration">

@@ -5,10 +5,9 @@
     <meta charset="UTF-8">
     <title>User Login</title>
     <link rel="stylesheet" href="./CSS/User_login.css">
-    <jsp:include page="header.jsp"/>
 </head>
 <body>
-
+<jsp:include page="header.jsp"/>
 <div class="container">
     <div class="content">
         <h1><b>USER LOGIN</b></h1>

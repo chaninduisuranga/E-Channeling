@@ -1,7 +1,7 @@
 package com.users;
 
 import java.io.IOException;
-import java.util.List;
+
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -22,16 +22,18 @@ public class login_servelet extends HttpServlet {
 		String password = request.getParameter("pass");
 		
 		try {
-		List<user>usr =userBDutill.validate(username, password);
-		request.setAttribute("usr", usr);
+			user usr = userBDutill.validate(username, password);
+			if(usr != null) {
+				request.setAttribute("usr", usr);
+				RequestDispatcher dis = request.getRequestDispatcher("user_profile.jsp");
+				dis.forward(request, response);
+				System.out.println("login success!");
+			} else {
+				response.sendRedirect("Home_page.jsp");
+			}
 		}
 		catch(Exception e) {
 			e.printStackTrace();
-		}
-		
-		RequestDispatcher dis = request.getRequestDispatcher("user_profile.jsp");
-		dis.forward(request, response);
-	
-
+		}	
 	}
 }

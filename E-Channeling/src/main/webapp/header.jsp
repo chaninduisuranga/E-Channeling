@@ -6,10 +6,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title><%= "Bank Ease" %></title>
   <link rel="stylesheet" href="${pageContext.request.contextPath}/CSS/header.css">
-<link  rel="href="${pageContext.request.contextPath}/IMAGES/pic2.jpeg" type="IMAGES/pic2.jpeg">
+  <link  rel="href="${pageContext.request.contextPath}/IMAGES/pic2.jpeg" type="IMAGES/pic2.jpeg">
 </head>
 <body>
   <header class="header">
@@ -25,7 +24,6 @@
         <li><a href="${pageContext.request.contextPath}/Services.jsp" title="Services">Services</a></li>
         <li><a href="${pageContext.request.contextPath}/about_us.jsp" title="About">About Us</a></li>
         <li><a href="${pageContext.request.contextPath}/contact.jsp" title="Contact Us">Contact</a></li>
-        
       </ul>
     </nav>
   </header>

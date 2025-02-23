@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+
     <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
@@ -18,53 +17,69 @@
   <div class="container">
     <h2>User Profile</h2>
 <table>
-<c:forEach var="us" items="${usr}">
 
 
+<c:set var="user_id" value="${usr.user_id}"/>
+<c:set var="name" value="${usr.name}"/>
+<c:set var="phone_no" value="${usr.phone_no}"/>
+<c:set var="email" value="${usr.email}"/>
+<c:set var="password" value="${usr.password}"/>
 
 <tr>
         
         <td>User Id:</td>
-        <td>${us.user_id}</td>
+        <td>${usr.user_id}</td>
         
       </tr>
       
       <tr>
         
         <td>User's Name:</td>
-        <td>${us.name}</td>
+        <td>${usr.name}</td>
         
       </tr>
       
       <tr>
         
         <td>User's phone no:</td>
-        <td>${us.phone_no}</td>
+        <td>${usr.phone_no}</td>
         
       </tr>
       
       <tr>
         
         <td>User's Email:</td>
-        <td>${us.email}</td>
+        <td>${usr.email}</td>
         
       </tr>
       
       <tr>
         
         <td>User's Password:</td>
-        <td>${us.password}</td>
+        <td>${usr.password}</td>
         
       </tr>
       
-
-</c:forEach>
 </table>
 
 <div class="button-container">
+
+<c:url value="updateProfile.jsp" var="user">
+   
+<c:param name="user_id" value="${usr.user_id}"/>
+<c:param name="name" value="${usr.name}"/>
+<c:param name="phone_no" value="${usr.phone_no}"/>
+<c:param name="email" value="${usr.email}"/>
+<c:param name="password" value="${usr.password}"/>
+
+</c:url>
     
-<button>UPDATE</button>
-<button>DELETE</button>
+    <a href="${user}">
+    <button type="button">UPDATE</button>
+</a>
+    <a href="deleteuser.jsp">
+    <button type="button">DELETE</button>
+</a>
     </div>
 </div>
 </div>
