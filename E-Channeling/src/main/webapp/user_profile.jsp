@@ -1,87 +1,75 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<link rel="stylesheet" href="./CSS/user_profile.css">
-
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/CSS/user_profile.css">
 </head>
 <body>
-
-<div class="container">
- <h1><i>Welcome to your profile...</i></h1>
- 
   
-  <div class="container">
-    <h2>User Profile</h2>
-<table>
 
+    <div class="container">
+        <div class="box">
+        
+        <c:set var="usr" value="${user}" />
+        <c:set var="userId" value="${usr.user_id}" />
+        <c:set var="userName" value="${usr.name}" />
+        <c:set var="userEmail" value="${usr.email}" />
+        <c:set var="userPhone" value="${usr.phone_no}" />
+        <c:set var="userRole" value="${usr.role}" />
+        <c:set var="userHospital" value="${usr.hospital}" />
+            
+            <form action="${pageContext.request.contextPath}/updateProfileServelet" method="POST">
+           
+           
+                <label>User ID:</label>
+                <input type="text" name="id" value="${usr.user_id}" required>
+                <label>Name:</label>
+                <input type="text" name="name" value="${usr.name}" required>
 
-<c:set var="user_id" value="${usr.user_id}"/>
-<c:set var="name" value="${usr.name}"/>
-<c:set var="phone_no" value="${usr.phone_no}"/>
-<c:set var="email" value="${usr.email}"/>
-<c:set var="password" value="${usr.password}"/>
+                <label>Email:</label>
+                <input type="email" name="email" value="${usr.email}" readonly>
 
-<tr>
-        
-        <td>User Id:</td>
-        <td>${usr.user_id}</td>
-        
-      </tr>
-      
-      <tr>
-        
-        <td>User's Name:</td>
-        <td>${usr.name}</td>
-        
-      </tr>
-      
-      <tr>
-        
-        <td>User's phone no:</td>
-        <td>${usr.phone_no}</td>
-        
-      </tr>
-      
-      <tr>
-        
-        <td>User's Email:</td>
-        <td>${usr.email}</td>
-        
-      </tr>
-      
-      <tr>
-        
-        <td>User's Password:</td>
-        <td>${usr.password}</td>
-        
-      </tr>
-      
-</table>
+                <label>Phone Number:</label>
+                <input type="text" name="phone_no" value="${usr.phone_no}" required>
 
-<div class="button-container">
+                <c:if test="${user.role == 'doctor'}">
+                    <label>Hospital:</label>
+                    <input type="text" name="hospital" value="${usr.hospital}">
+                </c:if>
 
-<c:url value="updateProfile.jsp" var="user">
-   
-<c:param name="user_id" value="${usr.user_id}"/>
-<c:param name="name" value="${usr.name}"/>
-<c:param name="phone_no" value="${usr.phone_no}"/>
-<c:param name="email" value="${usr.email}"/>
-<c:param name="password" value="${usr.password}"/>
+                <input type="submit" value="Save Changes">
+            </form>
 
-</c:url>
-    
-    <a href="${user}">
-    <button type="button">UPDATE</button>
-</a>
-    <a href="deleteuser.jsp">
-    <button type="button">DELETE</button>
-</a>
+            <hr>
+
+           
+            <form action="${pageContext.request.contextPath}" method="POST">
+                <label>Old Password:</label>
+                <input type="password" name="oldPassword" required>
+
+                <label>New Password:</label>
+                <input type="password" name="newPassword" required>
+
+                <input type="submit" value="Change Password">
+            </form>
+
+            <hr>
+
+           
+            <form action="${pageContext.request.contextPath}" method="POST">
+                <input type="hidden" name="user_id" value="${user.user_id}">
+                <input type="submit" value="Delete Account" class="delete-btn" onclick="return confirm('Are you sure you want to delete your account?');">
+            </form>
+
+            <a href="${pageContext.request.contextPath}/LogoutServlet" class="logout-btn">Logout</a>
+        </div>
     </div>
-</div>
-</div>
+
+  
 </body>
 </html>

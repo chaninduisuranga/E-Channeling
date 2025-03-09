@@ -22,21 +22,24 @@ public class userInsertServelet extends HttpServlet {
 		String phone_no= request.getParameter("no");
 		String email= request.getParameter("email");
 		String password= request.getParameter("pass");
+		String role= request.getParameter("role");
+		String hospital= request.getParameter("hospital");
 		
 		
 		
-		boolean isTrue  = userBDutill.insertuser(user_id,name,phone_no, email,password);
+		boolean isTrue  = userBDutill.insertuser(user_id,name,phone_no, email,password,role,hospital);
 		
 		if(isTrue==true) {
 			
-			RequestDispatcher dis = request.getRequestDispatcher("Home_page.jsp");
+			RequestDispatcher dis = request.getRequestDispatcher("User_login.jsp");
 			dis.forward(request, response);
 		}
 		else {
 			
-			RequestDispatcher dis = request.getRequestDispatcher("unsuc.jsp");
-					dis.forward(request, response);
-		}
+			request.setAttribute("RegisterError", "Registration Failed");
+	        RequestDispatcher dis = request.getRequestDispatcher("signup.jsp");
+	        dis.forward(request, response);
 	}
 
+  }
 }

@@ -20,9 +20,15 @@
 
             <label for="pass">PASSWORD:</label>
             <input type="password" name="pass" placeholder="Enter your password" maxlength="50" required>
-
+            
+                        
             <button type="submit" name="btn">LOGIN</button>
         </form>
+        
+        <% if (request.getAttribute("errorMessage") != null) { %>
+        <p style="color: red;"><%= request.getAttribute("errorMessage") %></p>
+    <% } %>
+    
     </div>
 
     <div class="pic">

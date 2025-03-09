@@ -1,64 +1,79 @@
-@charset "UTF-8";
 body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-    }
+    font-family: 'Poppins', sans-serif;
+    background: #f5f5f5;
+    text-align: center;
+}
 
-    .container {
-      max-width: 600px;
-      margin: 50px auto;
-      background: #fff;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
-    h1 {
-      text-align: center;
-      color: #000000;
-      font-family:serif;
-    }
+.box {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 400px;
+}
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 30px;
-    }
+h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
 
-    th, td {
-      padding: 16px;
-      text-align: left;
-      border-bottom: 1px solid #ddd;
-    }
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
 
-    th {
-      background-color: #4CAF50;
-      color: #0000a0;
-      
-    }
+input[type="text"], input[type="email"], input[type="password"], input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
 
-    tr:hover {
-      background-color: #c0c0c0;
-    }
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
 
-    .button-container {
-      text-align: center;
-      margin-top: 20px;
-      
-    }
+input[type="submit"]:hover {
+    background: #0056b3;
+}
 
-    button {
-      padding: 10px 20px;
-      background-color: #ff0000;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-    }
+.logout-btn, .delete-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 10px;
+}
 
-    button:hover {
-      background-color: #3ab92d;
-    }
+.logout-btn {
+    background: #d9534f;
+    color: white;
+}
+
+.delete-btn {
+    background: #dc3545;
+    color: white;
+}
+
+.logout-btn:hover, .delete-btn:hover {
+    background: #c82333;
+}

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,6 +34,20 @@
 
             <label for="pass">PASSWORD:</label>
             <input type="password" name="pass" placeholder="Enter your password" maxlength="50" required>
+            
+            <label>Role:</label>
+    <select name="role" required>
+        <option value="admin" ${usr.role == 'admin' ? 'selected' : ''}>Admin</option>
+        <option value="doctor" ${usr.role == 'doctor' ? 'selected' : ''}>Doctor</option>
+        <option value="patient" ${usr.role == 'patient' ? 'selected' : ''}>Patient</option>
+    </select>
+
+    <c:if test="${usr.role == 'doctor'}">
+        <label>Hospital:</label>
+        <input type="text" name="hospital" value="${usr.hospital}">
+    </c:if>
+
+
 
             <button type="submit" name="btn">SIGN UP</button>
         </form>
